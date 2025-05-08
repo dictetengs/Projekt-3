@@ -1,0 +1,138 @@
+
+
+/* Block: portfolio - main container */
+.portfolio {
+    display: grid;
+    grid-template-areas:
+      "menu menu"
+      "header header"
+      "content--text content--image"
+      "text-box image-row"
+      "projects projects"
+      "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background-color: #000;
+    padding: 1px;
+  }
+  
+  /* All direct children of .portfolio */
+  .portfolio > div {
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  /* Element: header */
+  .portfolio__header {
+    grid-area: header;
+    text-align: center;
+  }
+  
+  /* Element: menu */
+  .portfolio__menu {
+    grid-area: menu;
+  }
+  
+  /* Element: menu-inner */
+  .portfolio__menu-inner {
+    background-color: #fff;
+    padding: 20px;
+    text-align: right;
+  }
+  
+  /* Modifier: content--text */
+  .portfolio__content--text {
+    grid-area: content--text;
+  }
+  
+  /* Modifier: content--image */
+  .portfolio__content--image {
+    grid-area: content--image;
+  }
+  
+  /* Element: text-box */
+  .portfolio__text-box {
+    grid-area: text-box;
+    text-align: center;
+  }
+  
+  /* Element: text-box-split */
+  .portfolio__text-box-split {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Element: text-box-item */
+  .portfolio__text-box-item {
+    width: 100%;
+    padding: 1px;
+    background-color: #fff;
+    text-align: left;
+  }
+  
+  /* Element: image-row */
+  .portfolio__image-row {
+    grid-area: image-row;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Element: image */
+  .portfolio__image {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #ccc;
+  }
+  
+  /* Element: projects */
+  .portfolio__projects {
+    grid-area: projects;
+    text-align: center;
+  }
+  
+  /* Element: projects-grid */
+  .portfolio__projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Element: individual project */
+  .portfolio__project {
+    flex: 0 0 calc(33.333% - 10px);
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  /* Element: footer */
+  .portfolio__footer {
+    grid-area: footer;
+  }
+  
+  /* Element: contact info box */
+  .portfolio__contact {
+    width: 250px;
+    text-align: left;
+    margin-left: auto;
+    background-color: #fff;
+    padding: 2px;
+    border: 1px solid #fff;
+  }
+  
+  /* Responsive modifiers for project grid */
+  @media (max-width: 800px) {
+    .portfolio__project {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .portfolio__project {
+      flex: 0 0 100%;
+    }
+  }
+  
