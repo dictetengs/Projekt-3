@@ -1,0 +1,304 @@
+/* === Base styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Kalnia", serif;
+  background-color: #fefaee;
+}
+
+/* === Links === */
+a:link,
+a:visited {
+  font-family: "Kalnia", serif;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #67654b;
+  text-decoration: underline;
+}
+
+a:active {
+  color: brown;
+  text-decoration: underline;
+}
+
+/* Current page indicator - Outlined Pill style */
+.portfolio__menu-link.current {
+  /* Change to keep text black instead of white */
+  color: black;
+  font-weight: bold;
+  /* Replace background with border */
+  background-color: transparent;
+  border: 2px solid #67654b;
+  border-radius: 20px;
+  padding: 5px 12px;
+  transition: all 0.3s ease;
+}
+
+.portfolio__menu-link.current:hover {
+  text-decoration: none;
+  color: #67654b;
+  border-color: #554f3d;
+}
+
+/* Grid layout for portfolio */
+.portfolio {
+  display: grid;
+  grid-template-areas:
+    "menu menu"
+    "header header"
+    "container container"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.site-logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: auto;
+  z-index: 1000;
+}
+
+/* Kalnia logo styling */
+.kalnia-logo {
+  font-family: "Kalnia", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 30px;
+  font-variation-settings: "wdth" 100;
+}
+
+/* === Menu === */
+.portfolio__menu {
+  grid-area: menu;
+  width: 100%;
+  height: 94px;
+  z-index: 2;
+}
+
+.portfolio__menu-inner {
+  text-align: right;
+}
+
+.portfolio__menu-link {
+  display: inline-block;
+  margin: 0 45px;
+  text-decoration: none;
+  font-family: "Kalnia", serif;
+  color: black;
+}
+
+.portfolio__menu-link img {
+  height: 30px;
+  width: auto;
+  vertical-align: bottom;
+}
+
+/* === Header === */
+.portfolio__header {
+  grid-area: header;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.portfolio__header-textbox {
+  text-align: center;
+  padding: 20px;
+}
+
+.portfolio__header-textbox p {
+  margin-top: 20px;
+  font-family: "Kalnia", serif;
+}
+
+/* === Project Container === */
+.portfolio__container {
+  grid-area: container;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+  gap: 30px;
+}
+
+/* Create project cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.project-card__media {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.project-card__media img,
+.project-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card__description {
+  padding: 20px;
+  font-family: "Kalnia", serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-card__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #67654b;
+}
+
+/* Media scaling for images and video */
+.item img,
+.item video {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* === Footer === */
+.portfolio__footer {
+  grid-area: footer;
+  padding: 20px;
+  background-color: #fefaee;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.portfolio__contact,
+.portfolio__address {
+  color: #333;
+  font-family: "Kalnia", serif;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 10px 15px;
+  flex: 1;
+}
+
+.portfolio__contact {
+  text-align: right;
+}
+
+/* === Media Queries === */
+@media (max-width: 800px) {
+  .portfolio__container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .item {
+    flex: 0 0 50%;
+  }
+
+  .kalnia-logo {
+    font-size: 40px;
+    letter-spacing: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kalnia-logo {
+    font-size: 21px;
+    letter-spacing: 4px;
+  }
+
+  /* Adjust the current indicator for mobile */
+  .portfolio__menu-link.current {
+    padding: 3px 8px;
+    border-width: 1px; /* Thinner border on mobile */
+  }
+
+  .portfolio__menu {
+    font-size: 12px;
+    background-size: contain;
+    background-position: right;
+    height: 40px;
+  }
+
+  .portfolio__menu-inner {
+    position: absolute;
+    right: 5%;
+    text-align: right;
+  }
+
+  .portfolio__menu-link {
+    margin: 0 5px;
+  }
+
+  .portfolio__header-textbox {
+    padding: 20px 10px;
+    font-size: 17px;
+  }
+
+  .portfolio__container {
+    margin: 20px auto;
+  }
+
+  .item {
+    flex: 0 0 100%;
+    height: auto;
+    min-height: 200px;
+    font-size: 1em;
+  }
+
+  .portfolio__footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio__contact,
+  .portfolio__address {
+    text-align: center;
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+  }
+
+  .project-card {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+
+@media (min-width: 992px) {
+  .project-card {
+    flex: 0 0 calc(33.333% - 20px);
+  }
+}

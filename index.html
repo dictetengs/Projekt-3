@@ -1,78 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="page.css">
-</head>
-<body>
-
-<div class="portfolio">
-  
-  <div class="portfolio__menu">
-    <div class="portfolio__menu-inner">
-      Min menu:
-      <a href="#" class="portfolio__menu-link">Link 1</a>
-      <a href="#" class="portfolio__menu-link">Link 2</a>
-      <a href="#" class="portfolio__menu-link">Link 3</a>
-    </div>
-  </div>
-
-  <div class="portfolio__header">
-    <h2>Velkommen til min Portfolio</h2>
-  </div>
-
-  <div class="portfolio__content portfolio__content--text">
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum odor amet, consectetuer adipiscing elit...</p>
-  </div>
-
-  <div class="portfolio__content portfolio__content--image">
-    <img src="img/dicte-612x325.jpg" alt="Dicte">
-  </div>
-
-  <div class="portfolio__text-box">
-    Ny tekst boks højre<br>
-    <div class="portfolio__text-box-split">
-      <div class="portfolio__text-box-item">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum odor amet, consectetuer adipiscing elit...</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicte's Portfolio</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img src="./img/dtlogo.png" alt="Logo" class="site-logo" />
+    <div class="portfolio">
+      <div class="portfolio__menu">
+        <div class="portfolio__menu-inner">
+          <a href="#" class="portfolio__menu-link" title="Home"
+            ><img src="img/home-button.png" alt="Home button"
+          /></a>
+          <a href="pages/aboutme.html" class="portfolio__menu-link">About me</a>
+          <a href="pages/projects.html" class="portfolio__menu-link"
+            >Projects</a
+          >
+          <a href="pages/contact.html" class="portfolio__menu-link">Contacts</a>
+        </div>
       </div>
-      <div class="portfolio__text-box-item">
-        <h3>Lorem Ipsum</h3>
-        <p>Lorem ipsum odor amet, consectetuer adipiscing elit...</p>
+
+      <div class="portfolio__header">
+        <div class="portfolio__header-textbox">
+          <h1 class="kalnia-logo">DesignTengs</h1>
+          <p>Multimedia Designer</p>
+          <p>Dicte Tengs</p>
+        </div>
+      </div>
+
+      <div class="portfolio__content--text">
+        <div class="portfolio__text-box">
+          <p>My name is Dicte and</p>
+          <p>I am an aspiring</p>
+          <p>Multimedia Designer.</p>
+          <p>I strive to be the best</p>
+          <p>at meeting your needs</p>
+          <p>and improving your media.</p>
+        </div>
+      </div>
+
+      <div class="portfolio__content--image">
+        <div class="logo"></div>
+      </div>
+
+      <div class="portfolio__projects">
+        <h1 class="portfolio__projects-title">My Projects</h1>
+        <div class="portfolio__projects-grid">
+          <div class="portfolio__project">
+            <a href="./pages/projects.html"
+              ><img src="./img/Beatstars_small.png" height="" width=""
+            /></a>
+          </div>
+          <div class="portfolio__project">
+            <a href="./pages/projects.html"
+              ><img src="./img/Nuwavmerch_small.png"
+            /></a>
+          </div>
+          <div class="portfolio__project">
+            <a href="./pages/projects.html"
+              ><img src="./img/reklame_small.png"
+            /></a>
+          </div>
+          <div class="portfolio__project">
+            <a href="./pages/projects.html">
+              <video
+                controls="controls"
+                width="300"
+                height="302.29"
+                name="Video Name"
+              >
+                <source src="./video/Screen_recording_01.mov" />
+              </video>
+            </a>
+          </div>
+          <div class="portfolio__project">
+            <a href="./pages/projects.html">
+              <video
+                controls="controls"
+                width="280"
+                height="329.54"
+                name="Video Name"
+              >
+                <source src="./video/Screen_recording_02.mov" />
+              </video>
+            </a>
+          </div>
+          <div class="portfolio__project">
+            <a href="./pages/projects.html">
+              <video
+                controls="controls"
+                width="200"
+                height="300"
+                name="Video Name"
+              >
+                <source
+                  src="./video/Spotify_Visualizer_Concept.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio__footer">
+        <div class="portfolio__address">
+          <p>
+            Dicte Agerskov Tengs<br />
+            Hans Tausens Gade 12<br />
+            5000 Odense
+          </p>
+        </div>
+        <div class="portfolio__contact">
+          <p>
+            Contact:<br />
+            Email: dictetengs@gmail.com<br />
+            +45 28 87 70 06
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="portfolio__image-row">
-    <img src="billede1.jpg" alt="Billede 1" class="portfolio__image">
-    <img src="billede2.jpg" alt="Billede 2" class="portfolio__image">
-  </div>
-
-  <div class="portfolio__projects">
-    <h1 class="portfolio__projects-title">Overskrift</h1>
-    <div class="portfolio__projects-grid">
-      <div class="portfolio__project">Billede 1<br>Tekst under billede</div>
-      <div class="portfolio__project">2</div>
-      <div class="portfolio__project">3</div>
-      <div class="portfolio__project">4</div>
-      <div class="portfolio__project">5</div>
-      <div class="portfolio__project">6</div>
-    </div>
-  </div>
-
-  <div class="portfolio__footer">
-    <h4>
-      <div class="portfolio__contact">
-        Dicte Agerskov Tengs<br>
-        Hans Tausens gade 12<br>
-        5000 Odense<br>
-        kontakt: dictetengs@gmail.com
-      </div>
-    </h4>
-  </div>
-
-</div>
-
-</body>
+  </body>
 </html>
