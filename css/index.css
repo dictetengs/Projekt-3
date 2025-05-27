@@ -42,7 +42,6 @@ body {
 /* === Typography === */
 .kalnia-logo {
   font-family: "Kalnia", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 100px;
@@ -89,9 +88,9 @@ body {
 
 .portfolio__header-textbox {
   position: relative;
-  top: 200px;
+  top: -15px;
   left: 10%;
-  font-size: 40px;
+  font-size: 50px;
   text-align: left;
   font-family: "Kalnia", serif;
 }

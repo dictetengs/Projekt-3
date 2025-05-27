@@ -147,6 +147,8 @@ a:active {
 .portfolio__header-textbox {
   text-align: center;
   padding: 20px;
+  font-size: 50px;
+  font-family: "Kalnia", serif;;
 }
 
 /* === Footer === */
